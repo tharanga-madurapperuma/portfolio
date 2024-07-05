@@ -1,0 +1,45 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", san-serif;
+}
+
+.box-container_work-section > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	margin: 50px;
+}
+
+.work-section-develop,
+.work-section-design {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	row-gap: 20px;
+}
+
+.box-container_work-section div p {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin: -20px 0 50px 0;
+}
+
+.box-container_work-section div:last-child p {
+	margin-top: 100px;
+}
+
+.work-section-design img,
+.work-section-develop img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	transition: 0.5s;
+	opacity: 0.5;
+}
+
+.work-section-design img:hover,
+.work-section-develop img:hover {
+	scale: 120%;
+	opacity: 1;
+}

@@ -14,6 +14,7 @@
 	align-items: center;
 	position: fixed;
 	top: 0;
+	z-index: 10;
 }
 
 .about-nav > h1 {
@@ -55,11 +56,15 @@
 }
 
 .about-content__wrapper {
-	background-image: url("../assets/background.svg");
-	background-size: cover;
-	background-repeat: no-repeat;
 	width: 100%;
 	height: 100vh;
+}
+
+.about-content__wrapper > img {
+	position: fixed;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-attachment: fixed;
 }
 
 .about-content__box {
@@ -67,15 +72,142 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: auto;
+	height: 100vh;
 	position: absolute;
+	color: var(--white-color);
 	top: 0;
 	left: 0;
 }
 
 .box {
+	width: 85%;
+	position: absolute;
+	top: 20%;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+}
+
+.box-container {
+	width: 94%;
+	margin: 3% 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.box-container_header {
+	margin-bottom: 50px;
+}
+
+.box-container_header > div {
+	display: flex;
+	align-items: center;
+}
+
+.box-container_header > div > div {
+	margin-left: 10px;
+	width: 100px;
+	height: 2px;
+	background-color: var(--light-blue);
+}
+
+.box-container_header > div > h3 {
+	font-weight: 400;
+}
+
+.box-container_header h1 {
+	margin-top: 10px;
+	font-weight: 600;
+}
+
+.box-container_personal-details {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.box-container_personal-details > div:first-child {
+	width: 60%;
+	font-weight: 400;
+}
+
+.box-container_personal-details > div > img {
 	width: 80%;
-	margin-top: 100px;
-	height: 80vh;
-	background-color: rgba(0, 0, 0, 0.8);
+	float: right;
+}
+
+.personal-details-table {
+	color: var(--white-color);
+	margin: 30px;
+	border-spacing: 15px;
+}
+
+.personal-details-table tr b {
+	color: var(--light-blue);
+}
+
+.box-tech h1 {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.box-tech {
+	margin-top: 8%;
+}
+
+.box-tech-content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 10px;
+	row-gap: 10px;
+	margin: 50px 0 0 50px;
+}
+
+.box-tech-content > div {
+	background-color: rgba(54, 54, 54, 0.5);
+	height: 70px;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.box-tech-content > div > img {
+	margin: 0 15px;
+}
+
+.box-goals > ul {
+	margin: 20px 50px;
+}
+
+.box-goals > ul > li {
+	font-weight: 300;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+
+.box-achievments_content {
+	display: flex;
+	column-gap: 20px;
+	margin: 50px 0 0 40px;
+	width: 95%;
+	overflow-x: scroll;
+	margin-bottom: 100px;
+}
+
+.box-achievments_content::-webkit-scrollbar {
+	display: none;
+}
+
+.box-achievments_content > img {
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
+}
+
+@media screen and (max-width: 1250px) {
+	.box-container_personal-details > div:last-child {
+		display: none;
+	}
 }
